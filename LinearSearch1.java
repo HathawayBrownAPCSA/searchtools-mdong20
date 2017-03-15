@@ -6,6 +6,9 @@ public class LinearSearch1
     */
   public static int findNum (int[] data, int target)
   {
+    for (int i = 0; i < data.length; i++)
+      if (data[i] == target)
+        return i;
     return -1;
   }
   
@@ -15,6 +18,9 @@ public class LinearSearch1
    */
   public static int findString (String[] data, String target)
   {
+    for (int i = 0; i < data.length; i++)
+      if (data[i].equals(target))
+        return i;
     return -1;
   }
   
@@ -24,7 +30,7 @@ public class LinearSearch1
     // Integer search
     // initialize array
     int[] numbers = {30, 18, 5, 9, 27, 42, 4};
-    int goal = 10;
+    int goal = 42;
     
     // print array
     for (int i : numbers) 
@@ -43,7 +49,7 @@ public class LinearSearch1
     // initialize array
     String[] names = {"Fiona", "Colby", "Sara", "Anna", "Michelle", "Kate", "Savana", "Hannah",
       "Lexi", "Andrew", "Coco", "Leah", "Megan", "Jennifer", "Kathy", "Alison", "Amanda"};
-    String findMe = "Bubba";
+    String findMe = "Alison";
     
     // print array
     for (String s : names) 
