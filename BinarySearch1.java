@@ -7,6 +7,20 @@ public class BinarySearch1
     */
   public static int findNum (int[] data, int target)
   {
+    int first = 0;
+    int last = data.length - 1;
+    
+    while (first <= last)
+    {
+      int middle = (first + last) / 2;
+      
+      if (data[middle] == target)
+        return middle;
+      else if (data[middle] < target)
+        first = middle + 1;
+      else 
+        last = middle - 1;
+    }
     return -1;
   }
   
@@ -17,7 +31,22 @@ public class BinarySearch1
     */
   public static int findString (String[] data, String target)
   {
+    int first = 0;
+    int last = data.length - 1; 
+    
+    while (first <= last)
+    {
+      int middle = (first + last) / 2;
+      
+      if (data[middle].compareTo(target) == 0)
+        return middle;
+      else if (data[middle].compareTo(target) < 0)
+        first = middle + 1;
+      else 
+        last = middle - 1;      
+    }   
     return -1;
+ 
   }
   
   
@@ -26,7 +55,7 @@ public class BinarySearch1
     // Integer search
     // initialize array
     int[] numbers = {4, 7, 19, 23, 31, 47};
-    int goal = 10;
+    int goal = 47;
     
     // print array
     for (int i : numbers) 
@@ -45,7 +74,7 @@ public class BinarySearch1
     // initialize array
     String[] names = {"Alison", "Amanda", "Andrew", "Anna", "Coco", "Colby", "Fiona", "Hannah", "Jennifer", 
       "Kate", "Kathy", "Leah", "Lexi", "Megan", "Michelle", "Sara", "Savana" };
-    String findMe = "Bubba";
+    String findMe = "Michelle";
     
     // print array
     for (String s : names) 
